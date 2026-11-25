@@ -60,7 +60,7 @@ class CurlClient : public lib::griddb::HttpClient {
         curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 10L);
         curl_easy_setopt(curl, CURLOPT_TIMEOUT, 40L);
         curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
-        curl_easy_setopt(curl, CURLOPT_USERAGENT, "Library-Switch/0.1");
+        curl_easy_setopt(curl, CURLOPT_USERAGENT, "Playshelf-Switch/0.1");
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &CurlClient::onData);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &r.body);
         curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 0L);

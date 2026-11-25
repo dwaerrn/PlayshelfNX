@@ -414,7 +414,7 @@ const Memo::Entry* Memo::find(TitleId id) const {
 
 std::string Memo::serialize() const {
     std::ostringstream out;
-    out << "# Library SteamGridDB lookups\n";
+    out << "# Playshelf SteamGridDB lookups\n";
     for (const auto& kv : entries_) {
         const Entry& e = kv.second;
         const char* word = e.outcome == Outcome::Found     ? "found"

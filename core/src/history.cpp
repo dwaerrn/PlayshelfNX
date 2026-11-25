@@ -35,7 +35,7 @@ size_t HistoryStore::merge(const std::vector<RawEvent>& fresh) {
 
 std::string HistoryStore::serialize() const {
     std::ostringstream out;
-    out << "# Library history v1\n";
+    out << "# Playshelf history v1\n";
     for (const RawEvent& e : events_) {
         out << static_cast<int>(e.kind) << "|" << titleHex(e.title) << "|" << (e.user.valid() ? e.user.hex() : "-") << "|" << e.clock << "|" << e.steady << "\n";
     }
@@ -91,7 +91,7 @@ std::string NameCache::name(TitleId id) const {
 
 std::string NameCache::serialize() const {
     std::ostringstream out;
-    out << "# Library names v1\n";
+    out << "# Playshelf names v1\n";
     for (const auto& n : names_) {
         std::string clean = n.second;
         for (char& c : clean) if (c == '|' || c == '\n' || c == '\r') c = ' ';

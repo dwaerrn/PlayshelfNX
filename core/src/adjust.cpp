@@ -21,7 +21,7 @@ void AdjustmentStore::set(TitleId id, const Uid& user, int64_t seconds) {
 
 std::string AdjustmentStore::serialize() const {
     std::ostringstream out;
-    out << "# Library playtime adjustments (seconds)\n";
+    out << "# Playshelf playtime adjustments (seconds)\n";
     for (const auto& kv : values_) {
         out << "adjust|" << titleHex(kv.first.first) << "|" << kv.first.second.hex() << "|" << kv.second << "\n";
     }

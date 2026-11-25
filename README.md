@@ -1,8 +1,8 @@
-# Library
+# Playshelf
 
 A playtime library for the Nintendo Switch. Your games as a shelf of boxart cards, with how long you played each one, when, and how often, per profile. Homebrew included.
 
-![Library](docs/screenshots/library.png)
+![Playshelf](docs/screenshots/library.png)
 
 | Details | New titles found |
 | --- | --- |
@@ -14,7 +14,7 @@ A playtime library for the Nintendo Switch. Your games as a shelf of boxart card
 
 - **Boxart shelf** per profile, sorted by playtime or by last played (R). The panel below shows the focused game's playtime, last played, launches and the last 7 days.
 - **Details page** for every game: totals, average and longest session, first and last played, playtime per month and per weekday, and the last 50 sessions.
-- **Homebrew and forwarders.** The system never links them to a profile, so other tools don't list them. Library notices them and lets a profile *claim* them. Claimed titles with the same name merge into one game, and their statistics are kept even after a forwarder is deleted.
+- **Homebrew and forwarders.** The system never links them to a profile, so other tools don't list them. Playshelf notices them and lets a profile *claim* them. Claimed titles with the same name merge into one game, and their statistics are kept even after a forwarder is deleted.
 - **Your history stays.** The app keeps its own copy of the console's play log, so deleted games and old sessions don't disappear. Names of deleted titles come from the system's cache.
 - **Posters** from your own files, or downloaded automatically from [SteamGridDB](https://www.steamgriddb.com) (optional, needs a free API key). You can pick another poster per game.
 - **Rename** a game, hide the homebrew badge, or **adjust the playtime** (for example after a save transfer). The recorded data stays untouched.
@@ -22,21 +22,21 @@ A playtime library for the Nintendo Switch. Your games as a shelf of boxart card
 
 ## Installation
 
-1. Get `Library.nro` (see [Building](#building)) and copy it to `sdmc:/switch/Library/`.
+1. Get `Playshelf.nro` (see [Building](#building)) and copy it to `sdmc:/switch/Playshelf/`.
 2. Start it from the Homebrew Menu in **title takeover** mode (hold R while launching a game), or make an NSP forwarder for it. It also works when started from the album (applet mode).
 
-The app only reads the console's play data; it never changes it. Everything it stores lives in `sdmc:/config/Library/`.
+The app only reads the console's play data; it never changes it. Everything it stores lives in `sdmc:/config/Playshelf/`.
 
 ### SteamGridDB posters (optional)
 
 1. Create an account on [steamgriddb.com](https://www.steamgriddb.com) and generate an API key (Preferences → API).
-2. Put the key on the first line of `sdmc:/config/Library/steamgriddb.txt`.
+2. Put the key on the first line of `sdmc:/config/Playshelf/steamgriddb.txt`.
 
 On the next start the app looks up a poster for every game without one, in the background. Press − on a card to choose a different poster or search under another name.
 
 ### Your own posters
 
-Put an image named after the title ID (shown on the details page) into `sdmc:/config/Library/art/`, for example `art/0100F2C0115B6000.jpg`. JPEG or PNG, ideally 600x900. Your own files always win.
+Put an image named after the title ID (shown on the details page) into `sdmc:/config/Playshelf/art/`, for example `art/0100F2C0115B6000.jpg`. JPEG or PNG, ideally 600x900. Your own files always win.
 
 ## Controls
 
@@ -52,7 +52,7 @@ Put an image named after the title ID (shown on the details page) into `sdmc:/co
 
 ## Data files
 
-All in `sdmc:/config/Library/`:
+All in `sdmc:/config/Playshelf/`:
 
 | File | Contents |
 | --- | --- |
@@ -79,7 +79,7 @@ cd app
 git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/xfangfang/borealis extern/borealis
 sh patch_borealis.sh
 cmake -B build_switch -DPLATFORM_SWITCH=ON -DUSE_DEKO3D=ON -DCMAKE_DEPENDS_USE_COMPILER=OFF
-cmake --build build_switch --target Library.nro
+cmake --build build_switch --target Playshelf.nro
 ```
 
 The app also builds and runs on a Linux PC with demo data, and the data code has unit tests. See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for both, and for how the code is organised.

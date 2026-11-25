@@ -11,7 +11,7 @@ static unsigned hm(unsigned h, unsigned m) { return h * 3600 + m * 60; }
 // Optional stress mode: stress.txt contains "<count>" or "<count> small" (small = 300x450 posters)
 static unsigned stressCount(bool& small) {
 #ifdef __SWITCH__
-    std::ifstream file("/config/Library/stress.txt");
+    std::ifstream file("/config/Playshelf/stress.txt");
 #else
     std::ifstream file("stress.txt");
 #endif
@@ -64,7 +64,7 @@ static std::vector<Game> buildGames() {
     for (unsigned i = 0; i < n; i++) {
         Game g = base[i % base.size()];
 #ifdef __SWITCH__
-        const std::string dir = small ? "/config/Library/stress_art_small/" : "/config/Library/stress_art/";
+        const std::string dir = small ? "/config/Playshelf/stress_art_small/" : "/config/Playshelf/stress_art/";
 #else
         const std::string dir = small ? "stress_art_small/" : "stress_art/";
 #endif

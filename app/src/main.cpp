@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
         return EXIT_FAILURE;
     }
 
-    brls::Application::createWindow("Library");
+    brls::Application::createWindow("Playshelf");
     ui::loadFonts();
     ui::applyTheme();
 

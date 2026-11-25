@@ -16,11 +16,11 @@ cmake_dependent_option(USE_SYSTEM_TWEENY "" OFF "NOT USE_SHARED_LIB" ON)
 include(${BOREALIS_LIBRARY}/cmake/toolchain.cmake)
 
 # project info
-project(Library)
+project(Playshelf)
 set(VERSION_MAJOR "0")
 set(VERSION_MINOR "1")
 set(VERSION_ALTER "0")
-set(PROJECT_AUTHOR "personal")
+set(PROJECT_AUTHOR "dwaerrn")
 set(PROJECT_ICON ${CMAKE_CURRENT_SOURCE_DIR}/resources/icon/library_icon.jpg)
 set(PROJECT_RESOURCES ${CMAKE_CURRENT_SOURCE_DIR}/resources)
 

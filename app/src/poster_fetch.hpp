@@ -11,7 +11,7 @@
 #include <thread>
 #include <vector>
 
-// SteamGridDB posters. Needs the user's API key in /config/Library/steamgriddb.txt (PC:
+// SteamGridDB posters. Needs the user's API key in /config/Playshelf/steamgriddb.txt (PC:
 // data/steamgriddb.txt). Posters are stored as 300x450 JPEGs in grids/; the user's own art/
 // files always win.
 struct PosterJob {
