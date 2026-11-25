@@ -23,7 +23,7 @@ A playtime library for the Nintendo Switch. Your games as a shelf of boxart card
 ## Installation
 
 1. Get `Playshelf.nro` (see [Building](#building)) and copy it to `sdmc:/switch/Playshelf/`.
-2. Start it from the Homebrew Menu in **title takeover** mode (hold R while launching a game), or make an NSP forwarder for it. It also works when started from the album (applet mode).
+2. Start it from the Homebrew Menu in **title takeover** mode (hold R while launching a game), or make an NSP forwarder for it.
 
 The app only reads the console's play data; it never changes it. Everything it stores lives in `sdmc:/config/Playshelf/`.
 
