@@ -8,7 +8,7 @@ A playtime library for the Nintendo Switch. Your games as a shelf of boxart card
 | --- | --- |
 | ![Details](docs/screenshots/details.png) | ![Claiming homebrew](docs/screenshots/claim.png) |
 
-*Screenshots: PC build with the demo data.*
+*Screenshots: Switch build with the real data.*
 
 ## Features
 
