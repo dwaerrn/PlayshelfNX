@@ -9,7 +9,7 @@ if (PLATFORM_SWITCH OR USE_DEKO3D)
     message(FATAL_ERROR "The Switch app is built from the app/ folder, not from here:\n"
                         "  cd app\n"
                         "  cmake -B build_switch -DPLATFORM_SWITCH=ON -DUSE_DEKO3D=ON -DCMAKE_DEPENDS_USE_COMPILER=OFF\n"
-                        "  cmake --build build_switch --target Library.nro\n"
+                        "  cmake --build build_switch --target Playshelf.nro\n"
                         "(this folder only builds the core library, its tests and libcli)")
 endif ()
 

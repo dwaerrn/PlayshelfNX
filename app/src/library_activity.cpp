@@ -212,8 +212,8 @@ void LibraryActivity::claimScreenClosed(bool libraryChanged) {
 }
 
 void LibraryActivity::updateTitle() {
-    if (frame_) frame_->setTitle("Library");
-    if (titleLabel_) titleLabel_->setText("Library");
+    if (frame_) frame_->setTitle("Playshelf");
+    if (titleLabel_) titleLabel_->setText("Playshelf");
     if (subtitleLabel_) subtitleLabel_->setText(profileCount() > 1 ? profileName() + "  \u2014  " + totalsText_ : totalsText_);
 }
 

@@ -16,7 +16,7 @@ cmake_dependent_option(USE_SYSTEM_TWEENY "" OFF "NOT USE_SHARED_LIB" ON)
 include(${BOREALIS_LIBRARY}/cmake/toolchain.cmake)
 
 # project info
-project(Library)
+project(Playshelf)
 set(VERSION_MAJOR "0")
 set(VERSION_MINOR "1")
 set(VERSION_ALTER "0")

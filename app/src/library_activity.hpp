@@ -33,7 +33,7 @@ class LibraryActivity : public brls::Activity {
     void rebuild();                 // new game list (after claims changed)
     void claimScreenClosed(bool libraryChanged);   // also used after a playtime adjustment
     void posterArrived(uint64_t id, const std::string& path);
-    void updateTitle();                     // "Library - <profile>" when there are several profiles
+    void updateTitle();                     // "Playshelf - <profile>" when there are several profiles
     void profileChosen(bool changed);
 
     brls::View* buildShelf();

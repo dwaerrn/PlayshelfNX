@@ -27,7 +27,7 @@ using Clock = std::chrono::steady_clock;
 
 std::string dataDir() {
 #ifdef __SWITCH__
-    return "/config/Library/";
+    return "/config/Playshelf/";
 #else
     return "data/";
 #endif
@@ -459,7 +459,7 @@ void loadTitlePrefs() {
 void saveTitlePrefs() {
     State& st = state();
     if (st.demo) return;
-    std::string out = "# Library: own names (name|ID|name) and hidden homebrew markers (nobadge|ID)\n";
+    std::string out = "# Playshelf: own names (name|ID|name) and hidden homebrew markers (nobadge|ID)\n";
     char hex[20];
     for (const auto& kv : st.titleNames) {
         std::snprintf(hex, sizeof(hex), "%016llX", static_cast<unsigned long long>(kv.first));

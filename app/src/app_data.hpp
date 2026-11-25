@@ -10,7 +10,7 @@
 // Loads the library for the UI: reads the console (or a recorded dump / demo data on a PC),
 // merges the system's play events into the app's own history, keeps names and claim snapshots
 // and returns the games of the current profile. The console is read once; later calls rebuild
-// the list from the current claims. Data files live in /config/Library/ (PC: ./data/).
+// the list from the current claims. Data files live in /config/Playshelf/ (PC: ./data/).
 std::vector<Game> loadLibraryGames();
 
 // One row of the claim screens: a title without a profile that the current profile can adopt
@@ -72,7 +72,7 @@ void setTitleName(uint64_t id, const std::string& name);
 void setHomebrewMarker(uint64_t id, bool shown);
 
 // Shared file helpers (also used by the poster download thread)
-std::string appDataDir();                                   // /config/Library/ (PC: data/)
+std::string appDataDir();                                   // /config/Playshelf/ (PC: data/)
 std::string readDataFile(const std::string& path);
 bool writeDataFile(const std::string& path, const std::string& content);   // safe replace
 void appLog(const std::string& line);                       // one line in debug.log (thread-safe)

@@ -177,7 +177,7 @@ bool ClaimStore::updateSnapshot(TitleId id, const std::string& name, const std::
 
 std::string ClaimStore::serialize() const {
     std::ostringstream out;
-    out << "# Library claims\n";
+    out << "# Playshelf claims\n";
     for (const ClaimEntry& e : entries_) {
         out << "claim|" << titleHex(e.id) << "|" << clean(e.name) << "|" << (e.hasSnapshot ? 1 : 0) << "|" << e.snapshot.playSeconds
             << "|" << e.snapshot.launches << "|" << e.snapshot.first << "|" << e.snapshot.last << "|";

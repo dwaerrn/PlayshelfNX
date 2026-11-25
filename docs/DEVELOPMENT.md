@@ -31,13 +31,13 @@ How the code is organised, how to build and test it, and the traps found along t
 Switch (devkitPro; e.g. `pacman -S switch-glm switch-curl`, deko3d includes `<glm/...>`):
 
     cmake -B build_switch -DPLATFORM_SWITCH=ON -DUSE_DEKO3D=ON -DCMAKE_DEPENDS_USE_COMPILER=OFF
-    cmake --build build_switch --target Library.nro
+    cmake --build build_switch --target Playshelf.nro
 
 PC (Linux; needs the X11/GL development packages and `libcurl4-openssl-dev`):
 
     cmake -B build -G Ninja -DPLATFORM_DESKTOP=ON -DCMAKE_BUILD_TYPE=Release -DGLFW_BUILD_WAYLAND=OFF -DGLFW_BUILD_X11=ON
     cmake --build build
-    cd build && ./Library
+    cd build && ./Playshelf
 
 - The repository-root CMake refuses the Switch options on purpose.
 - Sources are found by a glob: run the configure step again after adding a file.
@@ -48,7 +48,7 @@ PC (Linux; needs the X11/GL development packages and `libcurl4-openssl-dev`):
 
 Without a `library.dump` next to the binary the PC app shows demo data (two profiles, about 20 games, homebrew) and saves nothing, so the "New titles found" prompt appears on every start. A dump written by the console's Y button can be copied next to the binary as `library.dump`.
 
-Headless: `xvfb-run -a dbus-run-session -- ./Library`, keys with `xdotool` (Enter = A, Esc = B, X, Y, P = −, L, R), screenshots with `import -window root`.
+Headless: `xvfb-run -a dbus-run-session -- ./Playshelf`, keys with `xdotool` (Enter = A, Esc = B, X, Y, P = −, L, R), screenshots with `import -window root`.
 
 The repository ships no Nintendo fonts. On the Switch the system fonts are used; on a PC the app's own button hints show the button's letter instead of the controller glyph, and Borealis' footers show placeholders. To get the glyphs on a PC, put a Switch symbol font at `app/resources/font/switch_icons.ttf` (git-ignored by convention, not part of the repo).
 
