@@ -1,0 +1,7 @@
+file(GLOB CORE_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+add_library(librarycore STATIC ${CORE_SRC})
+target_include_directories(librarycore PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+set_target_properties(librarycore PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
+if (NOT MSVC)
+    target_compile_options(librarycore PRIVATE -Wall -Wextra)
+endif ()
